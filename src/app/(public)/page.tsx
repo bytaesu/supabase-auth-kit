@@ -61,7 +61,11 @@ export default async function HomePage() {
       </Card>
 
       <div>
-        <Link href={"#"} passHref>
+        <Link
+          href={"https://github.com/bytaesu/nextjs-supabase-auth-kit"}
+          prefetch={false}
+          passHref
+        >
           <Button variant={"link"}>
             <GitHubLogoIcon />
             bytaesu/nextjs-supabase-auth-kit

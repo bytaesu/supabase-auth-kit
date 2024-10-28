@@ -8,6 +8,11 @@ type Props = {
   errorMessage: string | string[] | undefined;
 };
 
+/**
+ * ErrorAlert Component
+ * Displays an alert with an error message and a close button.
+ * Can be dismissed by the user.
+ */
 const ErrorAlert = ({ errorMessage }: Props) => {
   const [isVisible, setIsVisible] = useState(true);
 

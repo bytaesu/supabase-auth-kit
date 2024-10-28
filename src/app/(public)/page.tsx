@@ -25,7 +25,7 @@ export default async function HomePage() {
               <li>Next.js 14 (React 18) using App Router</li>
               <li>Supabase</li>
               <li>Tailwind CSS</li>
-              <li>Shadcn UI</li>
+              <li>shadcn/ui</li>
               <li>Zod</li>
               <li>TypeScript</li>
             </ul>
@@ -34,7 +34,7 @@ export default async function HomePage() {
       </div>
       <Card>
         <CardHeader>
-          <CardTitle>Try Demo</CardTitle>
+          <CardTitle>Experience Demo</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="flex flex-col space-y-4">

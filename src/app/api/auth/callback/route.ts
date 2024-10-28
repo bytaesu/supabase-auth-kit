@@ -17,7 +17,7 @@ export async function GET(request: Request) {
 
     if (!error) {
       /** Success
-       * Optional additional tasks can be performed here 
+       * Optional: additional tasks can be performed here 
        * (e.g., updating data, tracking analytics)
        */
       const forwardedHost = request.headers.get("x-forwarded-host");

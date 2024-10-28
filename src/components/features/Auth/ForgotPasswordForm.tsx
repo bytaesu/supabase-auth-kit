@@ -26,8 +26,8 @@ interface ForgotPasswordFormProps {
 /**
  * ForgotPasswordForm component
  * Handles the process of collecting an email for password reset.
- * Validates the email, performs the forgot password action, and sets
- * verification stage if the email is valid.
+ * Validates the email, performs the forgot password action, and
+ * sets verification stage if the email is valid.
  */
 const ForgotPasswordForm = ({
   enterVerificationStage,

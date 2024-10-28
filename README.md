@@ -69,10 +69,19 @@ Many packages do not support React 19 yet. Therefore, I plan to upgrade to Next.
 *Supabase dashboard > Project settings > Configuration > Authentication*
 
 1. **Set up a custom SMTP server**. Follow the [Supabase guide for SMTP setup](https://supabase.com/docs/guides/auth/auth-smtp) to complete this configuration.
-2. **Setup password requirement**. This AuthKit is configured as shown below:
+2. **Set up password requirement**. This AuthKit is configured as shown below:
 <img width="379" alt="password-setting" src="https://github.com/user-attachments/assets/fea0cdba-0b80-472b-89a2-12a2c9e15f8f">
 
-3. **Change the code match to Supabase settings**
+
+3. **Set up Email Templates**
+
+Check [Supabase Guide](https://supabase.com/docs/guides/auth/auth-email-templates). This AuthKit is configured as shown below:
+
+<img width="500" alt="sign-up-email" src="https://github.com/user-attachments/assets/4a9d97b9-c8aa-457c-9617-64a84c18a44e">
+<img width="500" alt="reset-password-email" src="https://github.com/user-attachments/assets/14832b2b-19a4-4c63-bff4-20f2da7d8000">
+
+  
+4. **Change the code match to Supabase settings**
 
 | **Location** | **Description** |
 | --- | --- |

@@ -1,5 +1,3 @@
-import { EmailOtpType } from "@supabase/supabase-js";
-
 /** 
  * Type that returns only the error status without any data.
  * Success - { error: null }
@@ -18,12 +16,6 @@ export type ActionReturnWithData<T = unknown> = {
   data: T | null;
   error: string | null;
 };
-
-/** 
- * Extracts specific types from EmailOtpType that are actively used.
- * Only includes "signup" and "recovery".
- */
-export type PresetEmailOtpType = Extract<EmailOtpType, "signup" | "recovery">;
 
 /** 
  * Type representing query parameters for search.

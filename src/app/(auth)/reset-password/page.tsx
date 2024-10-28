@@ -3,7 +3,7 @@
 import ResetPasswordForm from "@/components/features/Auth/ResetPasswordForm";
 import SignOutButton from "@/components/features/Auth/SignOutButton";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { AUTH_ROUTES } from "@/lib/constants";
+import { AUTH_ROUTES } from "@/lib/supabase/auth-config";
 import { createClient } from "@/lib/supabase/client/server";
 import { ChevronLeft } from "lucide-react";
 import { redirect } from "next/navigation";

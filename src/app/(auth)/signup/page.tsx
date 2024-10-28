@@ -8,7 +8,7 @@ import VerificationStage from "@/components/features/Auth/VerificationStage";
 import useVerificationStage from "@/hooks/useVerificationStage";
 import Link from "next/link";
 import GoogleLogo from "@/components/ui/svg/google-logo";
-import { AUTH_ROUTES } from "@/lib/constants";
+import { AUTH_ROUTES } from "@/lib/supabase/auth-config";
 
 const SignUpPage = () => {
   // Use custom hook to manage the verification stage

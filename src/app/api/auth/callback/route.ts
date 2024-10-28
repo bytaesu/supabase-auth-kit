@@ -1,4 +1,4 @@
-import { AUTH_ROUTES, PRESET_ERRORS } from "@/lib/constants";
+import { AUTH_ROUTES, PRESET_ERRORS } from "@/lib/supabase/auth-config";
 import { createClient } from "@/lib/supabase/client/server";
 import { NextResponse } from "next/server";
 
@@ -17,10 +17,8 @@ export async function GET(request: Request) {
 
     if (!error) {
       /** Success
-       * 
-       * Optional additional tasks can be performed here 
+       * Optional: additional tasks can be performed here 
        * (e.g., updating data, tracking analytics)
-       * 
        */
       const forwardedHost = request.headers.get("x-forwarded-host");
       const isLocalEnv = process.env.NODE_ENV === "development";

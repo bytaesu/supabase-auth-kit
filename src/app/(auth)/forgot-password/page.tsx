@@ -7,7 +7,7 @@ import useVerificationStage from "@/hooks/useVerificationStage";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { AUTH_ROUTES } from "@/lib/constants";
+import { AUTH_ROUTES } from "@/lib/supabase/auth-config";
 
 const ForgotPasswordPage = () => {
   // Use custom hook to manage the verification stage

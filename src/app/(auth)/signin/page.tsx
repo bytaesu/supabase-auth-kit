@@ -4,7 +4,7 @@ import SignInForm from "@/components/features/Auth/SignInForm";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { OrDivider } from "@/components/ui/or-divider";
 import GoogleLogo from "@/components/ui/svg/google-logo";
-import { AUTH_ROUTES } from "@/lib/constants";
+import { AUTH_ROUTES } from "@/lib/supabase/auth-config";
 import { SearchParams } from "@/lib/types";
 import { isPresetErrorMessage } from "@/lib/utils";
 import Link from "next/link";

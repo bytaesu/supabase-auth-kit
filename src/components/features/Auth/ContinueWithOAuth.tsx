@@ -9,7 +9,7 @@ import {
   AUTH_ROUTES,
   PRESET_ERRORS,
   PROVIDER_DISPLAY_NAMES,
-} from "@/lib/constants";
+} from "@/lib/supabase/auth-config";
 
 type Props = {
   provider: Provider;
@@ -17,9 +17,8 @@ type Props = {
 };
 
 /**
- * Unlike other authentication processes, `signInWithOAuth` redirects to an
- * OAuth provider URL, requiring `use client`. The actual authentication is handled
- * in the route handler (/api/auth/callback).
+ * "signInWithOAuth" simply redirects to an OAuth provider URL, so "use client" was applied.
+ * The actual authentication is handled in the route handler (/api/auth/callback).
  */
 const ContinueWithOAuth = ({ provider, logo }: Props) => {
   const [isLoading, setIsLoading] = useState(false);

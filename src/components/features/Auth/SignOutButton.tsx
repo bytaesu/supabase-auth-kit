@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { signOutAction } from "@/actions/sign-out";
-import { AUTH_ROUTES, PRESET_ERRORS } from "@/lib/constants";
 import { Button, ButtonProps } from "@/components/ui/button";
+import { AUTH_ROUTES, PRESET_ERRORS } from "@/lib/supabase/auth-config";
 
 type SignOutButtonProps = Pick<
   ButtonProps,

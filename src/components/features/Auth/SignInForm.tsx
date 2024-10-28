@@ -20,7 +20,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { AUTH_ROUTES } from "@/lib/constants";
+import { AUTH_ROUTES } from "@/lib/supabase/auth-config";
 
 /**
  * SignInForm Component

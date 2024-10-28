@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { toast } from "sonner";
 import { forgotPasswordAction } from "@/actions/forgot-password";
-import { PRESET_ERRORS } from "@/lib/constants";
 import { forgotPasswordFormSchema } from "@/lib/validation-schemas";
 import {
   Form,
@@ -18,6 +17,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { PRESET_ERRORS } from "@/lib/supabase/auth-config";
 
 interface ForgotPasswordFormProps {
   enterVerificationStage: (userEmail: string) => void;
@@ -26,8 +26,8 @@ interface ForgotPasswordFormProps {
 /**
  * ForgotPasswordForm component
  * Handles the process of collecting an email for password reset.
- * Validates the email, performs the forgot password action, and sets
- * verification stage if the email is valid.
+ * Validates the email, performs the forgot password action, and
+ * sets verification stage if the email is valid.
  */
 const ForgotPasswordForm = ({
   enterVerificationStage,

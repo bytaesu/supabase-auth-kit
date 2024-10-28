@@ -1,10 +1,10 @@
 "use server";
 
-import { PRESET_ERRORS } from "@/lib/constants";
 import { createClient } from "@/lib/supabase/client/server";
 import { forgotPasswordFormSchema } from "@/lib/validation-schemas";
 import { ActionReturnWithData } from "@/lib/types";
 import { getErrorMessage } from "@/lib/utils";
+import { PRESET_ERRORS } from "@/lib/supabase/auth-config";
 
 /**
  * forgotPasswordAction - Handles the forgot password request functionality

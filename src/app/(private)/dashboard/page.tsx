@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { AUTH_ROUTES } from "@/lib/constants";
+import { AUTH_ROUTES } from "@/lib/supabase/auth-config";
 import { createClient } from "@/lib/supabase/client/server";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";

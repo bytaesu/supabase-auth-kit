@@ -9,7 +9,7 @@ import {
   AUTH_ROUTES,
   PRESET_ERRORS,
   PROVIDER_DISPLAY_NAMES,
-} from "@/lib/constants";
+} from "@/lib/supabase/auth-config";
 
 type Props = {
   provider: Provider;

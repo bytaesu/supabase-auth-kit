@@ -1,8 +1,8 @@
 "use server";
 
-import { PRESET_ERRORS } from "@/lib/constants";
+import { PRESET_ERRORS, PresetEmailOtpType } from "@/lib/supabase/auth-config";
 import { createClient } from "@/lib/supabase/client/server";
-import { ActionReturn, PresetEmailOtpType } from "@/lib/types";
+import { ActionReturn } from "@/lib/types";
 import { getErrorMessage } from "@/lib/utils";
 
 /**

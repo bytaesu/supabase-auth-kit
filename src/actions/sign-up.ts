@@ -1,6 +1,6 @@
 "use server";
 
-import { PRESET_ERRORS } from "@/lib/constants";
+import { PRESET_ERRORS } from "@/lib/supabase/auth-config";
 import { createClient } from "@/lib/supabase/client/server";
 import { ActionReturnWithData } from "@/lib/types";
 import { getErrorMessage } from "@/lib/utils";
@@ -46,6 +46,8 @@ export async function signUpAction(
     /** Success
      * - On successful sign-up, the user’s email is returned.
      * - Initiates transition to the VerificationStage for email confirmation.
+     * - For existing accounts, to protect user privacy, a success response is returned 
+     *   without revealing that the account already exists.
      */
     return { data: { userEmail: data.user.email }, error: null };
   } catch (error) {

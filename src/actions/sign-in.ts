@@ -1,10 +1,10 @@
 "use server";
 
-import { PRESET_ERRORS } from "@/lib/constants";
 import { createClient } from "@/lib/supabase/client/server";
 import { signInFormSchema } from "@/lib/validation-schemas";
 import { ActionReturn } from "@/lib/types";
 import { getErrorMessage } from "@/lib/utils";
+import { PRESET_ERRORS } from "@/lib/supabase/auth-config";
 
 /**
  * signInAction - Handles user sign-in functionality.

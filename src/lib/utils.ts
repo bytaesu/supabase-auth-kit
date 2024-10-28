@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { PRESET_ERRORS } from "./constants";
+import { PRESET_ERRORS } from "./supabase/auth-config";
 
 // Merges class names, combining Tailwind CSS classes with conditional classes.
 export function cn(...inputs: ClassValue[]) {

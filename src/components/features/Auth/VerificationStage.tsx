@@ -7,10 +7,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import { z } from "zod";
 import { ChevronLeft, Loader2 } from "lucide-react";
-import { PRESET_EMAIL_OTP } from "@/lib/constants";
 import { verifyOtpAction } from "@/actions/verify-otp";
 import { verificationFormSchema } from "@/lib/validation-schemas";
-import { PresetEmailOtpType } from "@/lib/types";
 import { delay } from "@/lib/utils";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import {
@@ -19,6 +17,10 @@ import {
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { Button } from "@/components/ui/button";
+import {
+  PRESET_EMAIL_OTP,
+  PresetEmailOtpType,
+} from "@/lib/supabase/auth-config";
 
 interface VerificationStageProps {
   userEmail: string;

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { PASSWORD_REQUIREMENTS } from "./constants";
+import { PASSWORD_REQUIREMENTS } from "./supabase/auth-config";
 
 // Email validation schema
 export const emailSchema = z

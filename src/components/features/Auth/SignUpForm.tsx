@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { toast } from "sonner";
 import { signUpAction } from "@/actions/sign-up";
-import { PRESET_ERRORS } from "@/lib/constants";
 import { signUpFormSchema } from "@/lib/validation-schemas";
 import {
   Form,
@@ -20,6 +19,7 @@ import { Input } from "@/components/ui/input";
 import PasswordInput from "./PasswordInput";
 import PasswordConditionBar from "./PasswordConditionBar";
 import { Button } from "@/components/ui/button";
+import { PRESET_ERRORS } from "@/lib/supabase/auth-config";
 
 interface SignUpFormProps {
   enterVerificationStage: (userEmail: string) => void;

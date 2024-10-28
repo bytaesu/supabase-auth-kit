@@ -81,6 +81,13 @@ Many packages do not support React 19 yet. Therefore, I plan to upgrade to Next.
     <img width="500" alt="sign-up-email" src="https://github.com/user-attachments/assets/4a9d97b9-c8aa-457c-9617-64a84c18a44e">
     <img width="500" alt="reset-password-email" src="https://github.com/user-attachments/assets/14832b2b-19a4-4c63-bff4-20f2da7d8000">
 
+
+  1. **Set up Site URL, Redirect URLs**. Follow the [Supabase guide for Redirect URLs](https://supabase.com/docs/guides/auth/redirect-urls)
+  2. **Set up Email Templates** Check [Supabase Guide](https://supabase.com/docs/guides/auth/auth-email-templates). This AuthKit is configured as shown below:
+
+    <img width="500" alt="sign-up-email" src="https://github.com/user-attachments/assets/4a9d97b9-c8aa-457c-9617-64a84c18a44e">
+    <img width="500" alt="reset-password-email" src="https://github.com/user-attachments/assets/14832b2b-19a4-4c63-bff4-20f2da7d8000">
+
   
 - **Change the code match to Supabase settings**
 

@@ -64,34 +64,35 @@ Many packages do not support React 19 yet. Therefore, I plan to upgrade to Next.
 
 ## Authentication Flows
 
-### Password-based
+### 1. Password-based
 
-*Supabase dashboard > Project settings > Configuration > Authentication*
+- **Supabase dashboard > Project settings > Configuration > Authentication**
 
-1. **Set up a custom SMTP server**. Follow the [Supabase guide for SMTP setup](https://supabase.com/docs/guides/auth/auth-smtp) to complete this configuration.
-2. **Set up password requirement**. This AuthKit is configured as shown below:
-<img width="379" alt="password-setting" src="https://github.com/user-attachments/assets/fea0cdba-0b80-472b-89a2-12a2c9e15f8f">
+  1. **Set up a custom SMTP server**. Follow the [Supabase guide for SMTP setup](https://supabase.com/docs/guides/auth/auth-smtp) to complete this configuration.
+  2. **Set up password requirement**. This AuthKit is configured as shown below:
+  
+    <img width="379" alt="password-setting" src="https://github.com/user-attachments/assets/fea0cdba-0b80-472b-89a2-12a2c9e15f8f">
 
+- **Supabase dashboard > Authentication > Configuration**
 
-3. **Set up Email Templates**
+  1. **Set up Site URL, Redirect URLs**. Follow the [Supabase guide for Redirect URLs](https://supabase.com/docs/guides/auth/redirect-urls)
+  2. **Set up Email Templates** Check [Supabase Guide](https://supabase.com/docs/guides/auth/auth-email-templates). This AuthKit is configured as shown below:
 
-Check [Supabase Guide](https://supabase.com/docs/guides/auth/auth-email-templates). This AuthKit is configured as shown below:
-
-<img width="500" alt="sign-up-email" src="https://github.com/user-attachments/assets/4a9d97b9-c8aa-457c-9617-64a84c18a44e">
-<img width="500" alt="reset-password-email" src="https://github.com/user-attachments/assets/14832b2b-19a4-4c63-bff4-20f2da7d8000">
+    <img width="500" alt="sign-up-email" src="https://github.com/user-attachments/assets/4a9d97b9-c8aa-457c-9617-64a84c18a44e">
+    <img width="500" alt="reset-password-email" src="https://github.com/user-attachments/assets/14832b2b-19a4-4c63-bff4-20f2da7d8000">
 
   
-4. **Change the code match to Supabase settings**
+- **Change the code match to Supabase settings**
 
-| **Location** | **Description** |
-| --- | --- |
-| `/constants` | Configure authentication routes, custom error messages, and password requirements here. These settings are exported to other files, so you only need to define them once in this file. |
-| `middleware.ts` | Add any additional logic to be processed at the middleware level here. It’s recommended not to modify the default logic provided. |
+  | **Location** | **Description** |
+  | --- | --- |
+  | `/constants` | Configure authentication routes, custom error messages, and password requirements here. These settings are exported to other files, so you only need to define them   once in this file. |
+  | `middleware.ts` | Add any additional logic to be processed at the middleware level here. It’s recommended not to modify the default logic provided. |
 
-### Social Login (OAuth)
+### 2. Social Login (OAuth)
 
 Refer to the [Supabase documentation on social login](https://supabase.com/docs/guides/auth/social-login) to complete the setup. Once configured, add the ContinueWithOAuth component to the /signin and /signup pages.
 
-## Contirbutions
+## Contributions
 
 As an open-source project, contributions are welcome. You can enhance or add features to Supabase [GoTrue (Go)](https://github.com/supabase/auth), [Supabase-js (TypeScript)](https://github.com/supabase/supabase-js), or this Repository [AuthKit (TypeScript)](https://github.com/bytaesu/nextjs-supabase-auth-kit).

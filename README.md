@@ -91,8 +91,13 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
 
 3. **Set up Site URL, Rediret URLS**
    
-   Follow the [Supabase guide for Redirect URLs](https://supabase.com/docs/guides/auth/redirect-urls)
-4. **Set up Email Templates**
+   Follow the [Supabase guide for Redirect URLs](https://supabase.com/docs/guides/auth/redirect-urls).
+   This AuthKit is configured as shown below:
+
+   1. **`http://nextjs-supabase-auth-kit.vercel.app/api/auth/callback`**
+   2. For local development : **`http://localhost:3000/api/auth/callback`**
+   
+5. **Set up Email Templates**
    
    Follow the [Supabase guide for Email Templates](https://supabase.com/docs/guides/auth/auth-email-templates).
    This AuthKit is configured as shown below:

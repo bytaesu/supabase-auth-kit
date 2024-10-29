@@ -114,12 +114,12 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
   ```
 
   ```html
-  [Change Email Address]
+  [Reset Password]
 
-  <h2>Confirm Change of Email</h2>
-  
-  <p>Follow this link to confirm the update of your email from {{ .Email }} to {{ .NewEmail }}:</p>
-  <p><a href="{{ .ConfirmationURL }}">Change Email</a></p>
+  <h2>Reset Password</h2>
+
+  <p>Hello, <strong>{{ .Email }}</strong>. Here is your 6-digit code:</p>
+  <p><strong style="font-size: 24px;">{{ .Token }}</strong></p>
   ```
    
 5. **Modify the code to match Supabase settings**

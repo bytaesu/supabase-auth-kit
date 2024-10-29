@@ -1,16 +1,16 @@
 /** 
- * Type that returns only the error status without any data.
- * Success - { error: null }
- * Failure - { error: string }
+ * Return type for server actions with error status only. Usage: `Promise<ActionReturn>`
+ * - Success : { error: null }
+ * - Failure : { error: string }
  */
 export type ActionReturn = {
   error: string | null;
 };
 
 /** 
- * Type that returns both data and error status.
- * Success - { data: T, error: null }
- * Failure - { data: null, error: string }
+ * Return type for server actions with data and error status. Usage: `Promise<ActionReturnWithData<T>>`
+ * - Success : { data: T, error: null }
+ * - Failure : { data: null, error: string }
  */
 export type ActionReturnWithData<T = unknown> = {
   data: T | null;

@@ -17,28 +17,26 @@ const PasswordInput = React.forwardRef<
   const [passwordHidden, setPasswordHidden] = useState(true);
 
   return (
-    <div className="space-y-1">
-      <div className="relative">
-        <Input
-          type={passwordHidden ? "password" : "text"}
-          className={`pr-10 ${className}`}
-          ref={ref}
-          {...props}
-        />
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon"
-          onClick={() => setPasswordHidden(!passwordHidden)}
-          className="absolute inset-y-0 right-0 flex items-center text-muted-foreground"
-        >
-          {passwordHidden ? (
-            <EyeOff className="w-5 h-5" />
-          ) : (
-            <Eye className="w-5 h-5" />
-          )}
-        </Button>
-      </div>
+    <div className="relative">
+      <Input
+        type={passwordHidden ? "password" : "text"}
+        className={`pr-10 ${className}`}
+        ref={ref}
+        {...props}
+      />
+      <Button
+        type="button"
+        variant="ghost"
+        size="icon"
+        onClick={() => setPasswordHidden(!passwordHidden)}
+        className="absolute inset-y-0 right-0 flex items-center text-muted-foreground"
+      >
+        {passwordHidden ? (
+          <EyeOff className="w-5 h-5" />
+        ) : (
+          <Eye className="w-5 h-5" />
+        )}
+      </Button>
     </div>
   );
 });

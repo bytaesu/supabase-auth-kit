@@ -92,7 +92,7 @@ const SignUpForm = ({ enterVerificationStage }: SignUpFormProps) => {
                   <PasswordInput
                     id="password"
                     {...field}
-                    // 비밀번호 필드는 입력할 때마다 실시간 검증
+                    // The password field is validated in real-time as the user types
                     onChange={(e) => {
                       field.onChange(e);
                       form.trigger("password");

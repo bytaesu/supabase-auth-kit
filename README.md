@@ -73,6 +73,8 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
 
 ---
 
+<img width="500" alt="auth-flow" src="https://github.com/user-attachments/assets/0b5847e1-f61e-41f8-9b5c-7d37605d295c">
+
 
 ## Authentication Flows
 

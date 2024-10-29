@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/input-otp";
 import { Button } from "@/components/ui/button";
 import {
-  PRESET_EMAIL_OTP,
+  PRESET_EMAIL_OTP_CONFIG,
   PresetEmailOtpType,
 } from "@/lib/supabase/auth-config";
 
@@ -40,7 +40,7 @@ const VerificationStage = ({
 }: VerificationStageProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  const { redirectTo, message } = PRESET_EMAIL_OTP[emailOtpType];
+  const { redirectTo, message } = PRESET_EMAIL_OTP_CONFIG[emailOtpType];
 
   const form = useForm<z.infer<typeof verificationFormSchema>>({
     resolver: zodResolver(verificationFormSchema),

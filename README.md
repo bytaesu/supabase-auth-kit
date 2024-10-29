@@ -73,8 +73,7 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
 
 ---
 
-<img width="700" alt="auth-flow" src="https://github.com/user-attachments/assets/335335c6-5361-4491-9bdf-e956e815e450">
-
+<img width="700" alt="auth-flow" src="https://github.com/user-attachments/assets/25d84231-1bae-4c8f-bed3-d3dfc4aefbad">
 
 
 ## Authentication Flows
@@ -97,7 +96,7 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
    Follow the [Supabase guide for Redirect URLs](https://supabase.com/docs/guides/auth/redirect-urls).
    This AuthKit is configured as shown below:
 
-   1. **`http://nextjs-supabase-auth-kit.vercel.app/api/auth/callback`**
+   1. **`https://nextjs-supabase-auth-kit.vercel.app/api/auth/callback`**
    2. For local development : **`http://localhost:3000/api/auth/callback`**
    
 5. **Set up Email Templates**

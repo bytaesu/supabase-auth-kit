@@ -34,7 +34,7 @@ export default async function HomePage() {
       </div>
       <Card>
         <CardHeader>
-          <CardTitle>Experience Demo</CardTitle>
+          <CardTitle>Try live demo</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="flex flex-col space-y-4">

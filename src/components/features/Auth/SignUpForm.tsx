@@ -110,7 +110,7 @@ const SignUpForm = ({ enterVerificationStage }: SignUpFormProps) => {
 
         <div className="mt-6">
           <Button
-            variant={"brandButton"}
+            variant={"blue"}
             isLoading={isLoading}
             type="submit"
             className="w-full"

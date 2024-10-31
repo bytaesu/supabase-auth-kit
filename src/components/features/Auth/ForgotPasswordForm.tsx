@@ -88,7 +88,7 @@ const ForgotPasswordForm = ({
           </div>
           <div className="pt-6">
             <Button
-              variant={"brandButton"}
+              variant={"blue"}
               isLoading={isLoading}
               type="submit"
               className="w-full"

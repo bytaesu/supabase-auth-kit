@@ -48,7 +48,7 @@ const ForgotPasswordPage = () => {
 
           <CardFooter className="p-4 border-t bg-muted flex justify-center items-center">
             <Link href={AUTH_ROUTES.Public.SignIn}>
-              <div className="flex text-brandColor justify-center items-center">
+              <div className="flex text-blue-500 justify-center items-center">
                 <ChevronLeft size={20} />
                 <p className="text-sm font-medium">Back to sign in</p>
               </div>

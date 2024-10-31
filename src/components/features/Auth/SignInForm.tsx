@@ -80,7 +80,7 @@ const SignInForm = () => {
                 <div className="flex items-center justify-between">
                   <FormLabel>Password</FormLabel>
                   <Link href={AUTH_ROUTES.Public.ForgotPassword}>
-                    <p className="text-sm text-brandColor font-medium">
+                    <p className="text-sm text-blue-500 font-medium">
                       Forgot password?
                     </p>
                   </Link>
@@ -97,7 +97,7 @@ const SignInForm = () => {
         </div>
         <div className="pt-6">
           <Button
-            variant={"brandButton"}
+            variant={"blue"}
             isLoading={isLoading}
             type="submit"
             className="w-full"

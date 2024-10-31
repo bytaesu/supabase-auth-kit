@@ -49,7 +49,7 @@ const SignUpPage = () => {
                 Already have an account?
               </p>
               <Link href={AUTH_ROUTES.Public.SignIn}>
-                <p className="text-sm text-brandColor font-medium">Sign in</p>
+                <p className="text-sm text-blue-500 font-medium">Sign in</p>
               </Link>
             </div>
           </CardFooter>

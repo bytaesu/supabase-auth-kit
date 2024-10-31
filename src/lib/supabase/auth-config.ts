@@ -11,7 +11,6 @@ import { EmailOtpType, Provider } from "@supabase/supabase-js";
  * 4. PRESET_ERRORS: only messages.
  */
 
-
 /** 1. AUTH_ROUTES
  * 
  * IMPORTANT: 

@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { authMiddleware } from "./lib/supabase/middleware/auth-middleware";
+import { authMiddleware } from "./lib/supabase/client/middleware";
 import { AUTH_ROUTES, ONLY_PRIVATE_ROUTES, ONLY_PUBLIC_ROUTES } from "./lib/supabase/auth-config";
 
 export async function middleware(request: NextRequest) {

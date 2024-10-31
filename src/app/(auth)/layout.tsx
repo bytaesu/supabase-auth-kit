@@ -19,7 +19,7 @@ const AuthLayout = ({ children }: Props) => {
       <div className="flex items-center justify-center py-6">
         <Link href={"/"}>
           {/* Your Logo Here */}
-          <Shield size={40} fill="#4D4DFF" className="text-brandColor" />
+          <Shield size={40} fill="black" />
         </Link>
       </div>
 

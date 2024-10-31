@@ -40,9 +40,7 @@ const SignInPage = ({ searchParams }: Props) => {
             New to AuthKit?
           </p>
           <Link href={AUTH_ROUTES.Public.SignUp}>
-            <p className="text-sm text-brandColor font-medium">
-              Create account
-            </p>
+            <p className="text-sm text-blue-500 font-medium">Create account</p>
           </Link>
         </div>
       </CardFooter>

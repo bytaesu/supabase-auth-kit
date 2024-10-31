@@ -1,5 +1,11 @@
 ![nextjs-supabase-auth-kit](https://github.com/user-attachments/assets/eec5e637-e244-450b-8083-b045e91d8b1f)
 
+**A production-ready authentication kit that lets you manage the entire authentication system within a single file by copying and pasting the required code.**
+
+### [v1.0.0] - 2024-10-31
+- Updated CSS styling to use shadcn defaults for a more primitive kit setup.
+- Renamed folders and files and refactored code for a more understandable structure.
+
 # Overview
 
 ### Introduction
@@ -63,13 +69,13 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
     
     | **Folders and files** | **Description** |
     | --- | --- |
-    | `/client` | Sets up the Supabase client. |
-    | `/middleware` | Contains functions used in middleware setup. |
+    | `/client` | Sets up the Supabase client for use in the browser, server, and middleware. |
     | `auth-config.ts` | Configures authentication settings to match Supabase settings. |
 
 ### **`middleware.ts`**
 
 → Middleware for request preprocessing, such as authentication or routing logic.
+It should be in the root of your project to define Middleware. [Next.js Docs (middleware)](https://nextjs.org/docs/app/building-your-application/routing/middleware#convention)
 
 ---
 

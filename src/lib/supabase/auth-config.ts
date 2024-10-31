@@ -35,14 +35,6 @@ export const AUTH_ROUTES = {
   }
 }
 
-// IMPORTANT: Do not change these directly.
-export const ONLY_PRIVATE_ROUTES = Object.values(AUTH_ROUTES.Private);
-export const ONLY_PUBLIC_ROUTES = Object.values(AUTH_ROUTES.Public);
-
-
-// Extract only the required types from EmailOtpType as used by this AuthKit.
-export type PresetEmailOtpType = Extract<EmailOtpType, "signup" | "recovery">;
-
 /** 2. PRESET_EMAIL_OTP_CONFIG
  * 
  * Configuration for OTP actions based on PresetEmailOtpType.
@@ -87,6 +79,14 @@ export const PRESET_ERRORS = {
   MissingCallbackUrl: "Something went wrong. Please refresh the page and try again.",
   OAuthError: "Unable to securely get profile from provider. Please try again.",
 };
+
+
+// IMPORTANT: Do not change these directly.
+export const ONLY_PRIVATE_ROUTES = Object.values(AUTH_ROUTES.Private);
+export const ONLY_PUBLIC_ROUTES = Object.values(AUTH_ROUTES.Public);
+
+// Extract only the required types from EmailOtpType as used by this AuthKit.
+export type PresetEmailOtpType = Extract<EmailOtpType, "signup" | "recovery">;
 
 // Maps provider keys to user-friendly names for OAuth providers.
 export const PROVIDER_DISPLAY_NAMES: Record<Provider, string> = {

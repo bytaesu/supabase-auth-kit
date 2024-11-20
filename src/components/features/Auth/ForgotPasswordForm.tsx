@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { toast } from "sonner";
 import { forgotPasswordAction } from "@/actions/forgot-password";
-import { forgotPasswordFormSchema } from "@/lib/validation-schemas";
+import { forgotPasswordFormSchema } from "@/lib/validations";
 import {
   Form,
   FormControl,
@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { PRESET_ERRORS } from "@/lib/supabase/auth-config";
+import { PRESET_AUTH_ERRORS } from "@/lib/supabase/auth.config";
 
 interface ForgotPasswordFormProps {
   enterVerificationStage: (userEmail: string) => void;
@@ -60,7 +60,7 @@ const ForgotPasswordForm = ({
 
     if (!data?.userEmail) {
       setIsLoading(false);
-      toast.error(PRESET_ERRORS.UserEmailNotFound);
+      toast.error(PRESET_AUTH_ERRORS.UserEmailNotFound);
       return;
     }
 

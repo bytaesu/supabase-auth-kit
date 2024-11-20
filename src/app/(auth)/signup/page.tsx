@@ -1,14 +1,14 @@
 "use client";
 
-import ContinueWithOAuth from "@/components/features/Auth/ContinueWithOAuth";
-import SignUpForm from "@/components/features/Auth/SignUpForm";
+import ContinueWithOAuth from "@/components/features/auth/ContinueWithOAuth";
+import SignUpForm from "@/components/features/auth/SignUpForm";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { OrDivider } from "@/components/ui/or-divider";
-import VerificationStage from "@/components/features/Auth/VerificationStage";
+import VerificationStage from "@/components/features/auth/VerificationStage";
 import useVerificationStage from "@/hooks/useVerificationStage";
 import Link from "next/link";
 import GoogleLogo from "@/components/ui/svg/google-logo";
-import { AUTH_ROUTES } from "@/lib/supabase/auth-config";
+import { AUTH_ROUTES } from "@/lib/supabase/auth.config";
 
 const SignUpPage = () => {
   // Use custom hook to manage the verification stage

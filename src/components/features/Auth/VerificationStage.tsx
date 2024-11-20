@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { z } from "zod";
 import { ChevronLeft, Loader2 } from "lucide-react";
 import { verifyOtpAction } from "@/actions/verify-otp";
-import { verificationFormSchema } from "@/lib/validation-schemas";
+import { verificationFormSchema } from "@/lib/validations";
 import { delay } from "@/lib/utils";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import {
@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/button";
 import {
   PRESET_EMAIL_OTP_CONFIG,
   PresetEmailOtpType,
-} from "@/lib/supabase/auth-config";
+} from "@/lib/supabase/auth.config";
 
 interface VerificationStageProps {
   userEmail: string;

@@ -7,9 +7,9 @@ import { Provider } from "@supabase/supabase-js";
 import { Button } from "@/components/ui/button";
 import {
   AUTH_ROUTES,
-  PRESET_ERRORS,
+  PRESET_AUTH_ERRORS,
   PROVIDER_DISPLAY_NAMES,
-} from "@/lib/supabase/auth-config";
+} from "@/lib/supabase/auth.config";
 
 type Props = {
   provider: Provider;
@@ -52,7 +52,7 @@ const ContinueWithOAuth = ({ provider, logo }: Props) => {
 
     if (!callbackUrl) {
       setIsLoading(false);
-      const errorMessage = PRESET_ERRORS.MissingCallbackUrl;
+      const errorMessage = PRESET_AUTH_ERRORS.MissingCallbackUrl;
       toast.error(errorMessage);
       return;
     }

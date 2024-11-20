@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
-import { PRESET_ERRORS } from "./supabase/auth-config";
+import { PRESET_AUTH_ERRORS } from "./supabase/auth.config";
 
 // Merges class names, combining Tailwind CSS classes with conditional classes.
 export function cn(...inputs: ClassValue[]) {
@@ -31,11 +31,11 @@ export function delay(ms: number) {
 }
 
 // Checks if the provided error message matches a preset error message.
-export function isPresetErrorMessage(error_message: string | string[] | undefined): boolean {
+export function isPresetAuthError(error_message: string | string[] | undefined): boolean {
   if (typeof error_message === "string") {
-    return Object.values(PRESET_ERRORS).includes(error_message);
+    return Object.values(PRESET_AUTH_ERRORS).includes(error_message);
   } else if (Array.isArray(error_message)) {
-    return error_message.every((msg) => Object.values(PRESET_ERRORS).includes(msg));
+    return error_message.every((msg) => Object.values(PRESET_AUTH_ERRORS).includes(msg));
   } else {
     return false;
   }

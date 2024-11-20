@@ -1,9 +1,9 @@
 "use server";
 
-import ResetPasswordForm from "@/components/features/Auth/ResetPasswordForm";
-import SignOutButton from "@/components/features/Auth/SignOutButton";
+import ResetPasswordForm from "@/components/features/auth/ResetPasswordForm";
+import SignOutButton from "@/components/features/auth/SignOutButton";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { AUTH_ROUTES } from "@/lib/supabase/auth-config";
+import { AUTH_ROUTES } from "@/lib/supabase/auth.config";
 import { createClient } from "@/lib/supabase/client/server";
 import { ChevronLeft } from "lucide-react";
 import { redirect } from "next/navigation";

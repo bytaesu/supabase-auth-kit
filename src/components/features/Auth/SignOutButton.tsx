@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { signOutAction } from "@/actions/sign-out";
 import { Button, ButtonProps } from "@/components/ui/button";
-import { AUTH_ROUTES, PRESET_ERRORS } from "@/lib/supabase/auth-config";
+import { AUTH_ROUTES, PRESET_AUTH_ERRORS } from "@/lib/supabase/auth.config";
 
 type SignOutButtonProps = Pick<
   ButtonProps,
@@ -33,7 +33,7 @@ const SignOutButton = ({
 
     if (error) {
       setIsLoading(false);
-      toast.error(PRESET_ERRORS.SignOutError);
+      toast.error(PRESET_AUTH_ERRORS.SignOutError);
       return;
     }
 

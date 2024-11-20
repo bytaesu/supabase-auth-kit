@@ -8,7 +8,7 @@ import { EmailOtpType, Provider } from "@supabase/supabase-js";
  * 1. AUTH_ROUTES: only pathnames.
  * 2. PRESET_EMAIL_OTP_CONFIG: only messages.
  * 3. PASSWORD_REQUIREMENTS: match Supabase settings.
- * 4. PRESET_ERRORS: only messages.
+ * 4. PRESET_AUTH_ERRORS: only messages.
  */
 
 /** 1. AUTH_ROUTES
@@ -64,13 +64,13 @@ export const PASSWORD_REQUIREMENTS = [
   { regex: /[0-9]/, message: "Password needs to contain digits." },
 ];
 
-/** 4. PRESET_ERRORS
+/** 4. PRESET_AUTH_ERRORS
  * 
  * IMPORTANT:
  * - "default Keys": Do not change.
  * - "default Messages": Can be customized.
  */
-export const PRESET_ERRORS = {
+export const PRESET_AUTH_ERRORS = {
   ValidationError: "Invalid data format.",
   InvalidRequest: "Invalid request. Please try again.",
   UserNotFound: "User not found. Please try again.",

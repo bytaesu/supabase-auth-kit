@@ -1,12 +1,14 @@
 ![nextjs-supabase-auth-kit](https://github.com/user-attachments/assets/eec5e637-e244-450b-8083-b045e91d8b1f)
 
-**A production-ready authentication kit that lets you manage the entire authentication system within a single file by copying and pasting the required code.**
+<aside>
+A production-ready authentication kit that lets you manage the entire authentication system within a single file by copying and pasting the required code.
+</aside>
 
 ### [v1.0.0] - 2024-10-31
 - Updated CSS styling to use shadcn defaults for a more primitive kit setup.
 - Renamed folders and files and refactored code for a more understandable structure.
 
-# Overview
+# - Overview
 
 ### Introduction
 
@@ -28,7 +30,7 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
 ---
 
 
-## Folder and file structure in `/src`
+# - Folder and file structure in `/src`
 
 ### **`/actions`**
 
@@ -82,9 +84,9 @@ It should be in the root of your project to define Middleware. [Next.js Docs (mi
 <img width="700" alt="auth-flow" src="https://github.com/user-attachments/assets/25d84231-1bae-4c8f-bed3-d3dfc4aefbad">
 
 
-## Authentication Flows
+# - Authentication Flows
 
-### Password-based
+### *Password-based*
 
 *Supabase dashboard > Project settings > Configuration > Authentication*
 
@@ -132,12 +134,12 @@ It should be in the root of your project to define Middleware. [Next.js Docs (mi
    
    This is centrally managed in **`/lib/supabase/auth.config.ts`**.
 
-### Social Login (OAuth)
+### *Social Login (OAuth)*
 
 Refer to the [Supabase documentation on social login](https://supabase.com/docs/guides/auth/social-login) to complete the setup. Once configured, add the **'ContinueWithOAuth'** component to the /signin and /signup pages.
 
 ---
 
-## Contirbutions🚀
+# - Contirbutions🚀
 
 As an open-source project, contributions are welcome. You can enhance or add features to Supabase [GoTrue(Go)](https://github.com/supabase/auth), [Supabase-js(TypeScript)](https://github.com/supabase/supabase-js), or this repository [AuthKit (TypeScript)](https://github.com/bytaesu/nextjs-supabase-auth-kit).

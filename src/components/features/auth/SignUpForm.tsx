@@ -59,8 +59,8 @@ const SignUpForm = ({ enterVerificationStage }: SignUpFormProps) => {
       return;
     }
 
-    if (data) {
-      enterVerificationStage(data?.userEmail);
+    if (data?.userEmail) {
+      enterVerificationStage(data.userEmail);
     } else {
       setIsLoading(false);
       toast.error(PRESET_AUTH_ERRORS.UserEmailNotFound);

@@ -9,11 +9,11 @@ type Props = {
 };
 
 /**
- * ErrorAlert Component
+ * AuthErrorAlert Component
  * Displays an alert with an error message and a close button.
  * Can be dismissed by the user.
  */
-const ErrorAlert = ({ errorMessage }: Props) => {
+const AuthErrorAlert = ({ errorMessage }: Props) => {
   const [isVisible, setIsVisible] = useState(true);
 
   const handleClose = () => {
@@ -38,4 +38,4 @@ const ErrorAlert = ({ errorMessage }: Props) => {
   );
 };
 
-export default ErrorAlert;
+export default AuthErrorAlert;

@@ -1,10 +1,10 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/client/server";
-import { signInFormSchema } from "@/lib/validation-schemas";
+import { signInFormSchema } from "@/lib/validations";
 import { ActionReturn } from "@/lib/types";
 import { getErrorMessage } from "@/lib/utils";
-import { PRESET_ERRORS } from "@/lib/supabase/auth-config";
+import { PRESET_AUTH_ERRORS } from "@/lib/supabase/auth.config";
 
 /**
  * signInAction - Handles user sign-in functionality.
@@ -20,7 +20,7 @@ export async function signInAction(
     // Step 1: Validate the email and password using the schema
     const validation = signInFormSchema.safeParse({ email, password });
     if (!validation.success) {
-      const errorMessage = PRESET_ERRORS.ValidationError;
+      const errorMessage = PRESET_AUTH_ERRORS.ValidationError;
       return { error: errorMessage };
     }
 

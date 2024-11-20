@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import Link from "next/link";
 import { signInAction } from "@/actions/sign-in";
-import { signInFormSchema } from "@/lib/validation-schemas";
+import { signInFormSchema } from "@/lib/validations";
 import PasswordInput from "./PasswordInput";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,7 +20,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { AUTH_ROUTES } from "@/lib/supabase/auth-config";
+import { AUTH_ROUTES } from "@/lib/supabase/auth.config";
 
 /**
  * SignInForm Component

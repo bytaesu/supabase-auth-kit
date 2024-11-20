@@ -1,10 +1,10 @@
 "use server";
 
-import { PRESET_ERRORS } from "@/lib/supabase/auth-config";
+import { PRESET_AUTH_ERRORS } from "@/lib/supabase/auth.config";
 import { createClient } from "@/lib/supabase/client/server";
 import { ActionReturnWithData } from "@/lib/types";
 import { getErrorMessage } from "@/lib/utils";
-import { signUpFormSchema } from "@/lib/validation-schemas";
+import { signUpFormSchema } from "@/lib/validations";
 
 /**
  * signUpAction - Manages user registration.
@@ -21,7 +21,7 @@ export async function signUpAction(
     // Step 1: Validate the email and password format using Zod schema
     const validation = signUpFormSchema.safeParse({ email, password });
     if (!validation.success) {
-      const errorMessage = PRESET_ERRORS.ValidationError;
+      const errorMessage = PRESET_AUTH_ERRORS.ValidationError;
       return { data: null, error: errorMessage };
     }
 
@@ -39,7 +39,7 @@ export async function signUpAction(
 
     // Handle case where user email is unexpectedly missing in the response
     if (!data.user?.email) {
-      const errorMessage = PRESET_ERRORS.UserEmailNotFound;
+      const errorMessage = PRESET_AUTH_ERRORS.UserEmailNotFound;
       return { data: null, error: errorMessage };
     }
 

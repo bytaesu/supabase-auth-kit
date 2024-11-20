@@ -1,4 +1,4 @@
-import { AUTH_ROUTES, PRESET_ERRORS } from "@/lib/supabase/auth-config";
+import { AUTH_ROUTES, PRESET_AUTH_ERRORS } from "@/lib/supabase/auth.config";
 import { createClient } from "@/lib/supabase/client/server";
 import { NextResponse } from "next/server";
 
@@ -39,8 +39,8 @@ export async function GET(request: Request) {
    */
   const { error: SignOutError } = await supabase.auth.signOut();
   const errorMessage = SignOutError
-  ? PRESET_ERRORS.SignOutError
-  : PRESET_ERRORS.OAuthError;
+  ? PRESET_AUTH_ERRORS.SignOutError
+  : PRESET_AUTH_ERRORS.OAuthError;
 
   return NextResponse.redirect(
     `${origin}${redirectToError}?error_message=${encodeURIComponent(errorMessage)}`,

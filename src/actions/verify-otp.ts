@@ -1,6 +1,6 @@
 "use server";
 
-import { PRESET_ERRORS, PresetEmailOtpType } from "@/lib/supabase/auth-config";
+import { PRESET_AUTH_ERRORS, PresetEmailOtpType } from "@/lib/supabase/auth.config";
 import { createClient } from "@/lib/supabase/client/server";
 import { ActionReturn } from "@/lib/types";
 import { getErrorMessage } from "@/lib/utils";
@@ -32,7 +32,7 @@ export async function verifyOtpAction(
 
     // Handle case where the verified user is unexpectedly not returned
     if (!data.user) {
-      const errorMessage = PRESET_ERRORS.UserNotFound;
+      const errorMessage = PRESET_AUTH_ERRORS.UserNotFound;
       return { error: errorMessage };
     }
 

@@ -70,7 +70,7 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
     | **Folders and files** | **Description** |
     | --- | --- |
     | `/client` | Sets up the Supabase client for use in the browser, server, and middleware. |
-    | `auth-config.ts` | Configures authentication settings to match Supabase settings. |
+    | `auth.config.ts` | Configures authentication settings to match Supabase settings. |
 
 ### **`middleware.ts`**
 
@@ -130,7 +130,7 @@ It should be in the root of your project to define Middleware. [Next.js Docs (mi
    
 5. **Modify the code to match Supabase settings**
    
-   This is centrally managed in **`/lib/supabase/auth-config.ts`**.
+   This is centrally managed in **`/lib/supabase/auth.config.ts`**.
 
 ### Social Login (OAuth)
 

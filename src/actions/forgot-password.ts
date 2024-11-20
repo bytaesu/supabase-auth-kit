@@ -1,10 +1,10 @@
 "use server";
 
 import { createClient } from "@/lib/supabase/client/server";
-import { forgotPasswordFormSchema } from "@/lib/validation-schemas";
+import { forgotPasswordFormSchema } from "@/lib/validations";
 import { ActionReturnWithData } from "@/lib/types";
 import { getErrorMessage } from "@/lib/utils";
-import { PRESET_ERRORS } from "@/lib/supabase/auth-config";
+import { PRESET_AUTH_ERRORS } from "@/lib/supabase/auth.config";
 
 /**
  * forgotPasswordAction - Handles the forgot password request functionality
@@ -19,7 +19,7 @@ export async function forgotPasswordAction(
     // Step 1: Validate the email format using the schema
     const validation = forgotPasswordFormSchema.safeParse({ email });
     if (!validation.success) {
-      const errorMessage = PRESET_ERRORS.ValidationError;
+      const errorMessage = PRESET_AUTH_ERRORS.ValidationError;
       return { data: null, error: errorMessage };
     }
 

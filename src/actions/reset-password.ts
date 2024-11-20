@@ -1,6 +1,6 @@
 "use server";
 
-import { PRESET_ERRORS } from "@/lib/supabase/auth-config";
+import { PRESET_AUTH_ERRORS } from "@/lib/supabase/auth.config";
 import { createClient } from "@/lib/supabase/client/server";
 import { ActionReturn } from "@/lib/types";
 import { getErrorMessage } from "@/lib/utils";
@@ -28,7 +28,7 @@ export async function resetPasswordAction(
 
     // Return an error if the user data is not found in the response
     if (!data.user) {
-      const errorMessage = PRESET_ERRORS.UserNotFound;
+      const errorMessage = PRESET_AUTH_ERRORS.UserNotFound;
       return { error: errorMessage };
     }
 

@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { resetPasswordAction } from "@/actions/reset-password";
-import { resetPasswordFormSchema } from "@/lib/validation-schemas";
+import { resetPasswordFormSchema } from "@/lib/validations";
 import {
   Form,
   FormControl,
@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { AUTH_ROUTES } from "@/lib/supabase/auth-config";
+import { AUTH_ROUTES } from "@/lib/supabase/auth.config";
 
 /**
  * ResetPasswordForm Component

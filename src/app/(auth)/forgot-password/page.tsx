@@ -1,6 +1,5 @@
 "use client";
 
-import ForgotPasswordForm from "@/components/features/auth/ForgotPasswordForm";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import VerificationStage from "@/components/features/auth/VerificationStage";
 import useVerificationStage from "@/hooks/useVerificationStage";
@@ -8,6 +7,7 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import { AUTH_ROUTES } from "@/lib/supabase/auth.config";
+import ForgotPasswordForm from "@/components/features/auth/ForgotPasswordForm";
 
 const ForgotPasswordPage = () => {
   // Use custom hook to manage the verification stage

@@ -1,5 +1,8 @@
-import { AUTH_ROUTES, PRESET_AUTH_ERRORS } from "@/lib/supabase/auth.config";
-import { createClient } from "@/lib/supabase/client/server";
+import {
+  AUTH_ROUTES,
+  PRESET_AUTH_ERRORS,
+} from "@/features/auth/lib/auth.config";
+import { createClient } from "@/shared/lib/supabase/client/server";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
@@ -17,7 +20,7 @@ export async function GET(request: Request) {
 
     if (!error) {
       /** Success
-       * Optional: additional tasks can be performed here 
+       * Optional: additional tasks can be performed here
        * (e.g., updating data, tracking analytics)
        */
       const forwardedHost = request.headers.get("x-forwarded-host");
@@ -39,11 +42,10 @@ export async function GET(request: Request) {
    */
   const { error: SignOutError } = await supabase.auth.signOut();
   const errorMessage = SignOutError
-  ? PRESET_AUTH_ERRORS.SignOutError
-  : PRESET_AUTH_ERRORS.OAuthError;
+    ? PRESET_AUTH_ERRORS.SignOutError
+    : PRESET_AUTH_ERRORS.OAuthError;
 
   return NextResponse.redirect(
     `${origin}${redirectToError}?error_message=${encodeURIComponent(errorMessage)}`,
   );
- 
 }

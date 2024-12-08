@@ -5,6 +5,7 @@ A production-ready authentication kit that lets you manage the entire authentica
 </aside>
 
 ### [v1.0.0] - 2024-10-31
+
 - Updated CSS styling to use shadcn defaults for a more primitive kit setup.
 - Renamed folders and files and refactored code for a more understandable structure.
 
@@ -29,7 +30,6 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
 
 ---
 
-
 # - Folder and file structure in `/src`
 
 ### **`/actions`**
@@ -40,23 +40,23 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
 
 → Main application routes and pages, managed by the Next.js App Router.
 
-| **Folders and files** | **Description** |
-| --- | --- |
-| `(auth)` | Auth route groups |
-| `(private)` | Private route groups |
-| `(public)` | Public route groups |
-| `/api` | Route handlers |
-| `/fonts` | Local fonts |
-| `layout.tsx` | Root layout |
+| **Folders and files** | **Description**      |
+| --------------------- | -------------------- |
+| `(auth)`              | Auth route groups    |
+| `(private)`           | Private route groups |
+| `(public)`            | Public route groups  |
+| `/api`                | Route handlers       |
+| `/fonts`              | Local fonts          |
+| `layout.tsx`          | Root layout          |
 
 ### **`/components`**
 
 → React components
 
-| **Folders** | **Description** |
-| --- | --- |
-| `/features` | Components that are tightly coupled to specific app features. |
-| `/ui` | Reusable UI components for multiple pages, including components from shadcn-ui. |
+| **Folders** | **Description**                                                                 |
+| ----------- | ------------------------------------------------------------------------------- |
+| `/features` | Components that are tightly coupled to specific app features.                   |
+| `/ui`       | Reusable UI components for multiple pages, including components from shadcn-ui. |
 
 ### **`/hooks`**
 
@@ -67,12 +67,10 @@ Many packages do not yet support React 19, so I plan to upgrade to Next.js 15 wh
 → Shared libraries such as utilities, types and schemas.
 
 - **`/supabase` :** Supabase configuration
-    
-    
-    | **Folders and files** | **Description** |
-    | --- | --- |
-    | `/client` | Sets up the Supabase client for use in the browser, server, and middleware. |
-    | `auth.config.ts` | Configures authentication settings to match Supabase settings. |
+  | **Folders and files** | **Description** |
+  | --------------------- | --------------------------------------------------------------------------- |
+  | `/client` | Sets up the Supabase client for use in the browser, server, and middleware. |
+  | `auth.config.ts` | Configures authentication settings to match Supabase settings. |
 
 ### **`middleware.ts`**
 
@@ -83,58 +81,58 @@ It should be in the root of your project to define Middleware. [Next.js Docs (mi
 
 <img width="700" alt="auth-flow" src="https://github.com/user-attachments/assets/25d84231-1bae-4c8f-bed3-d3dfc4aefbad">
 
-
 # - Authentication Flows
 
-### *Password-based*
+### _Password-based_
 
-*Supabase dashboard > Project settings > Configuration > Authentication*
+_Supabase dashboard > Project settings > Configuration > Authentication_
 
 1. **Set up a custom SMTP server**
 
    Follow the [Supabase guide for SMTP setup](https://supabase.com/docs/guides/auth/auth-smtp) to complete this configuration.
+
 2. **Set up password requirement**
-   
+
    This AuthKit is configured as shown below:
-   
+
   <img width="379" alt="set-up-password" src="https://github.com/user-attachments/assets/430fcc29-1968-43bc-8b4d-91c96a74beaf">
 
 3. **Set up Site URL, Rediret URLS**
-   
+
    Follow the [Supabase guide for Redirect URLs](https://supabase.com/docs/guides/auth/redirect-urls).
    This AuthKit is configured as shown below:
 
    1. **`https://nextjs-supabase-auth-kit.vercel.app/api/auth/callback`**
    2. For local development : **`http://localhost:3000/api/auth/callback`**
-   
-5. **Set up Email Templates**
-   
+
+4. **Set up Email Templates**
+
    Follow the [Supabase guide for Email Templates](https://supabase.com/docs/guides/auth/auth-email-templates).
    This AuthKit is configured as shown below:
 
-  ```html
-  [Confirm signup]
+```html
+[Confirm signup]
 
-  <h2>Confirm your signup</h2>
-  
-  <p>Hello, <strong>{{ .Email }}</strong>. Here is your 6-digit code:</p>
-  <p><strong style="font-size: 24px;">{{ .Token }}</strong></p>
-  ```
+<h2>Confirm your signup</h2>
 
-  ```html
-  [Reset Password]
+<p>Hello, <strong>{{ .Email }}</strong>. Here is your 6-digit code:</p>
+<p><strong style="font-size: 24px;">{{ .Token }}</strong></p>
+```
 
-  <h2>Reset Password</h2>
+```html
+[Reset Password]
 
-  <p>Hello, <strong>{{ .Email }}</strong>. Here is your 6-digit code:</p>
-  <p><strong style="font-size: 24px;">{{ .Token }}</strong></p>
-  ```
-   
+<h2>Reset Password</h2>
+
+<p>Hello, <strong>{{ .Email }}</strong>. Here is your 6-digit code:</p>
+<p><strong style="font-size: 24px;">{{ .Token }}</strong></p>
+```
+
 5. **Modify the code to match Supabase settings**
-   
+
    This is centrally managed in **`/lib/supabase/auth.config.ts`**.
 
-### *Social Login (OAuth)*
+### _Social Login (OAuth)_
 
 Refer to the [Supabase documentation on social login](https://supabase.com/docs/guides/auth/social-login) to complete the setup. Once configured, add the **'ContinueWithOAuth'** component to the /signin and /signup pages.
 

@@ -6,6 +6,8 @@
 
 This is an AuthKit built using [Next.js](https://nextjs.org/) and [Supabase](https://supabase.com/), designed for **production-ready use**. It includes basic UI elements provided with [TailwindCSS](https://tailwindcss.com/) and [shadcn/ui](https://ui.shadcn.com/). Authentication is handled through both Password-based and OAuth methods, following the PKCE flow.
 
+By synchronizing app logic with Supabase settings in a single file, authentication can be managed flexibly and consistently.
+
 ### Teck stacks
 
 - TypeScript

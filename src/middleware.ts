@@ -1,6 +1,10 @@
+import {
+  AUTH_ROUTES,
+  ONLY_PRIVATE_ROUTES,
+  ONLY_PUBLIC_ROUTES,
+} from "./features/auth/lib/auth.config";
 import { NextResponse, type NextRequest } from "next/server";
-import { authMiddleware } from "./lib/supabase/client/middleware";
-import { AUTH_ROUTES, ONLY_PRIVATE_ROUTES, ONLY_PUBLIC_ROUTES } from "./lib/supabase/auth.config";
+import { authMiddleware } from "./shared/lib/supabase/client/middleware";
 
 export async function middleware(request: NextRequest) {
   const {
@@ -15,17 +19,24 @@ export async function middleware(request: NextRequest) {
    */
   // if (error) {}
 
-
   // Redirect unauthenticated users from private-only routes to the sign-in page.
-  const isOnlyPrivateRoute = ONLY_PRIVATE_ROUTES.some((path) => request.nextUrl.pathname.startsWith(path));
+  const isOnlyPrivateRoute = ONLY_PRIVATE_ROUTES.some((path) =>
+    request.nextUrl.pathname.startsWith(path),
+  );
   if (!user && isOnlyPrivateRoute) {
-    return NextResponse.redirect(new URL(AUTH_ROUTES.Public.SignIn, request.url));
+    return NextResponse.redirect(
+      new URL(AUTH_ROUTES.Public.SignIn, request.url),
+    );
   }
 
   // Redirect authenticated users from public-only routes to the private home.
-  const isOnlyPublicRoute = ONLY_PUBLIC_ROUTES.some((path) => request.nextUrl.pathname.startsWith(path));
+  const isOnlyPublicRoute = ONLY_PUBLIC_ROUTES.some((path) =>
+    request.nextUrl.pathname.startsWith(path),
+  );
   if (user && isOnlyPublicRoute) {
-    return NextResponse.redirect(new URL(AUTH_ROUTES.Private.PrivateHome, request.url));
+    return NextResponse.redirect(
+      new URL(AUTH_ROUTES.Private.PrivateHome, request.url),
+    );
   }
 
   return supabaseResponse;

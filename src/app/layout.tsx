@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { SonnerToaster } from "@/components/ui/sonner";
+import { SonnerToaster } from "@/shared/components/ui/sonner";
 import "./globals.css";
 
 const pretendard = localFont({

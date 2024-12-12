@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+import { Card } from "@/shared/components/ui/card";
 import { Shield } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";

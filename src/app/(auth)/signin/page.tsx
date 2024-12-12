@@ -1,12 +1,16 @@
-import AuthErrorAlert from "@/components/features/auth/AuthErrorAlert";
-import ContinueWithOAuth from "@/components/features/auth/ContinueWithOAuth";
-import SignInForm from "@/components/features/auth/SignInForm";
-import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { OrDivider } from "@/components/ui/or-divider";
-import GoogleLogo from "@/components/ui/svg/google-logo";
-import { AUTH_ROUTES } from "@/lib/supabase/auth.config";
-import { SearchParams } from "@/lib/types";
-import { isPresetAuthError } from "@/lib/utils";
+import {
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/shared/components/ui/card";
+import { OrDivider } from "@/shared/components/ui/or-divider";
+import GoogleLogo from "@/shared/components/ui/svg/google-logo";
+import { SearchParams } from "@/shared/lib/types";
+import AuthErrorAlert from "@/features/auth/components/AuthErrorAlert";
+import ContinueWithOAuth from "@/features/auth/components/ContinueWithOAuth";
+import SignInForm from "@/features/auth/components/SignInForm";
+import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
+import { isPresetAuthError } from "@/features/auth/lib/utils";
 import Link from "next/link";
 import React from "react";
 

@@ -1,6 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AUTH_ROUTES } from "@/lib/supabase/auth.config";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/shared/components/ui/card";
+import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
+import { Button } from "@/shared/components/ui/button";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";

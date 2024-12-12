@@ -1,5 +1,4 @@
 import { Card } from "@/shared/components/ui/card";
-import { Shield } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
@@ -18,8 +17,7 @@ const AuthLayout = ({ children }: Props) => {
     <div className="mx-auto px-4 w-full max-w-md">
       <div className="flex items-center justify-center py-6">
         <Link href={"/"}>
-          {/* Your Logo Here */}
-          <Shield size={40} fill="black" />
+          <p className="text-lg font-extrabold">Logo</p>
         </Link>
       </div>
 

@@ -7,7 +7,6 @@ import {
 import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
 import { Button } from "@/shared/components/ui/button";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,38 +26,33 @@ export default async function HomePage() {
           <div>
             <p className="text-xl font-semibold">Tech stacks</p>
             <ul className="list-disc ml-6 text-sm font-medium pt-1">
+              <li>TypeScript</li>
               <li>Next.js 14 (React 18) using App Router</li>
               <li>Supabase</li>
               <li>Tailwind CSS</li>
               <li>shadcn/ui</li>
               <li>Zod</li>
-              <li>TypeScript</li>
             </ul>
           </div>
         </div>
       </div>
-      <Card>
-        <CardHeader>
-          <CardTitle>Try live demo</CardTitle>
+      <Card className="px-8 shadow-2xl">
+        <CardHeader className="border-b mb-6">
+          <CardTitle>
+            <p className="text-2xl text-center">Live Demo</p>
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="flex flex-col space-y-4">
             <Link href={AUTH_ROUTES.Public.SignIn} passHref>
-              <Button className="pl-6">
-                Sign in
-                <ChevronRight />
-              </Button>
+              <Button className="w-full">Sign in</Button>
             </Link>
             <Link href={AUTH_ROUTES.Public.SignUp} passHref>
-              <Button className="pl-6">
-                Create account
-                <ChevronRight />
-              </Button>
+              <Button className="w-full">Create account</Button>
             </Link>
             <Link href={AUTH_ROUTES.Private.PrivateHome} passHref>
-              <Button variant={"outline"} className="pl-6">
+              <Button variant={"outline"} className="w-full">
                 Private Home
-                <ChevronRight />
               </Button>
             </Link>
           </div>

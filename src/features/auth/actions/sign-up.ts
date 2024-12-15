@@ -1,10 +1,10 @@
 "use server";
 
 import { ActionReturnWithData } from "@/shared/lib/types";
-import { createClient } from "@/shared/lib/supabase/client/server";
 import { getErrorMessage } from "@/shared/lib/utils";
 import { signUpFormSchema } from "../lib/validations";
 import { PRESET_AUTH_ERRORS } from "../lib/auth.config";
+import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 
 /**
  * signUpAction - Manages user registration.
@@ -26,7 +26,7 @@ export async function signUpAction(
     }
 
     // Step 2: Initialize Supabase client and attempt sign-up
-    const supabase = createClient();
+    const supabase = supabaseServerClient();
     const { data, error } = await supabase.auth.signUp({
       email: email,
       password: password,

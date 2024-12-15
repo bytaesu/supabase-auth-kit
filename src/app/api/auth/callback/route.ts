@@ -2,7 +2,7 @@ import {
   AUTH_ROUTES,
   PRESET_AUTH_ERRORS,
 } from "@/features/auth/lib/auth.config";
-import { createClient } from "@/shared/lib/supabase/client/server";
+import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
@@ -12,7 +12,7 @@ export async function GET(request: Request) {
   const redirectToError = AUTH_ROUTES.Public.SignIn;
 
   // Create Supabase Client
-  const supabase = createClient();
+  const supabase = supabaseServerClient();
 
   // Exchange code for session
   if (code) {

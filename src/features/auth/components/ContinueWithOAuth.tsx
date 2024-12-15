@@ -5,7 +5,7 @@ import {
   PRESET_AUTH_ERRORS,
   PROVIDER_DISPLAY_NAMES,
 } from "../lib/auth.config";
-import { createClient } from "@/shared/lib/supabase/client/browser";
+import { supabaseBrowserClient } from "@/shared/lib/supabase/client/browser";
 import { Button } from "@/shared/components/ui/button";
 import { Provider } from "@supabase/supabase-js";
 import React, { useEffect, useState } from "react";
@@ -27,7 +27,7 @@ const ContinueWithOAuth = ({ provider, logo }: Props) => {
 
   useEffect(() => {
     setCallbackUrl(
-      new URL(AUTH_ROUTES.API.OAuthCallback, window.location.origin).toString(),
+      new URL(AUTH_ROUTES.API.OAuthCallback, window.location.origin).toString()
     );
 
     // 'Safari' caches the page state when navigating back.
@@ -56,8 +56,8 @@ const ContinueWithOAuth = ({ provider, logo }: Props) => {
       toast.error(errorMessage);
       return;
     }
-    console.info(callbackUrl);
-    const supabase = createClient();
+
+    const supabase = supabaseBrowserClient();
 
     const { error } = await supabase.auth.signInWithOAuth({
       provider: provider,

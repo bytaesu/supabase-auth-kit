@@ -46,7 +46,7 @@ const ForgotPasswordForm = ({
    * - If successful, initiates the verification stage.
    */
   const onSubmit = async (
-    formData: z.infer<typeof forgotPasswordFormSchema>
+    formData: z.infer<typeof forgotPasswordFormSchema>,
   ) => {
     setIsLoading(true);
 

@@ -42,7 +42,7 @@ const ResetPasswordForm = () => {
    * - Submits the new password and, upon success, navigates the user to the private home page.
    */
   const onSubmit = async (
-    formData: z.infer<typeof resetPasswordFormSchema>
+    formData: z.infer<typeof resetPasswordFormSchema>,
   ) => {
     setIsLoading(true);
 

@@ -11,7 +11,7 @@ type Props = {
  */
 const PasswordConditionBar = ({ password }: Props) => {
   const fulfilledConditions = PASSWORD_REQUIREMENTS.filter((condition) =>
-    condition.regex.test(password)
+    condition.regex.test(password),
   ).length;
 
   const progressBars = Math.min(3, fulfilledConditions);

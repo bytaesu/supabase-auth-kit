@@ -50,7 +50,7 @@ const SignUpForm = ({ enterVerificationStage }: SignUpFormProps) => {
 
     const { data, error } = await signUpAction(
       formData.email,
-      formData.password
+      formData.password,
     );
 
     if (error) {

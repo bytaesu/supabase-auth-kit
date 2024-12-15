@@ -27,7 +27,7 @@ const ContinueWithOAuth = ({ provider, logo }: Props) => {
 
   useEffect(() => {
     setCallbackUrl(
-      new URL(AUTH_ROUTES.API.OAuthCallback, window.location.origin).toString()
+      new URL(AUTH_ROUTES.API.OAuthCallback, window.location.origin).toString(),
     );
 
     // 'Safari' caches the page state when navigating back.

@@ -6,7 +6,6 @@ import {
 import { updateSupabaseSession } from "./shared/lib/supabase/auth/session";
 import { NextResponse, type NextRequest } from "next/server";
 
-
 export async function middleware(request: NextRequest) {
   const {
     supabaseResponse,

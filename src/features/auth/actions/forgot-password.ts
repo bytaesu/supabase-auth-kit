@@ -6,7 +6,6 @@ import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 import { PRESET_AUTH_ERRORS } from "@/shared/lib/supabase/auth/auth.config";
 import { forgotPasswordFormSchema } from "../lib/validations";
 
-
 /**
  * forgotPasswordAction - Handles the forgot password request functionality
  * - Validates the email input.

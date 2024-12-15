@@ -2,10 +2,13 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 /**
- * Middleware function to handle authentication.
- * - Retrieves the current user's session from Supabase and sets cookies for responses.
+ * Synchronizes Supabase authentication session and cookies.
+ *
+ * - Initializes a Supabase server client.
+ * - Retrieves the current user's session.
+ * - Synchronizes cookies between the request and response.
  */
-export async function authMiddleware(request: NextRequest) {
+export async function updateSupabaseSession(request: NextRequest) {
   const supabaseResponse = NextResponse.next();
 
   const supabase = createServerClient(

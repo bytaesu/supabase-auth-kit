@@ -1,10 +1,10 @@
 "use server";
 
 import { ActionReturn } from "@/shared/lib/types";
-import { createClient } from "@/shared/lib/supabase/client/server";
 import { getErrorMessage } from "@/shared/lib/utils";
 import { signInFormSchema } from "../lib/validations";
 import { PRESET_AUTH_ERRORS } from "../lib/auth.config";
+import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 
 /**
  * signInAction - Handles user sign-in functionality.
@@ -25,7 +25,7 @@ export async function signInAction(
     }
 
     // Step 2: Attempt to sign the user in using Supabase authentication
-    const supabase = createClient();
+    const supabase = supabaseServerClient();
     const { error } = await supabase.auth.signInWithPassword({
       email: email,
       password: password,

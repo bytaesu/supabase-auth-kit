@@ -3,15 +3,15 @@ import {
   ONLY_PRIVATE_ROUTES,
   ONLY_PUBLIC_ROUTES,
 } from "./features/auth/lib/auth.config";
+import { updateSupabaseSession } from "./shared/lib/supabase/session";
 import { NextResponse, type NextRequest } from "next/server";
-import { authMiddleware } from "./shared/lib/supabase/client/middleware";
 
 export async function middleware(request: NextRequest) {
   const {
     supabaseResponse,
     user,
     // error
-  } = await authMiddleware(request);
+  } = await updateSupabaseSession(request);
 
   /**
    * Error Handling

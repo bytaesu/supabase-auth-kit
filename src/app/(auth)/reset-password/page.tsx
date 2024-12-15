@@ -5,7 +5,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/shared/components/ui/card";
-import { createClient } from "@/shared/lib/supabase/client/server";
+import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 import ResetPasswordForm from "@/features/auth/components/ResetPasswordForm";
 import SignOutButton from "@/features/auth/components/SignOutButton";
 import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
@@ -14,7 +14,7 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 const ResetPasswordPage = async () => {
-  const supabase = createClient();
+  const supabase = supabaseServerClient();
   const { data, error } = await supabase.auth.getUser();
 
   // Redirect to sign-in if no user data or an error occurs

@@ -5,7 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/shared/components/ui/card";
-import { createClient } from "@/shared/lib/supabase/client/server";
+import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 import SignOutButton from "@/features/auth/components/SignOutButton";
 import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
 import { Metadata } from "next";
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 };
 
 const PrivateHomePage = async () => {
-  const supabase = createClient();
+  const supabase = supabaseServerClient();
 
   const {
     data: { user },

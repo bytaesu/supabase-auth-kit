@@ -1,9 +1,9 @@
 "use server";
 
-import { createClient } from "@/shared/lib/supabase/client/server";
 import { ActionReturn } from "@/shared/lib/types";
 import { getErrorMessage } from "@/shared/lib/utils";
 import { PRESET_AUTH_ERRORS } from "../lib/auth.config";
+import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 
 /**
  * resetPasswordAction - Handles password reset functionality.
@@ -16,7 +16,7 @@ export async function resetPasswordAction(
 ): Promise<ActionReturn> {
   try {
     // Step 1: Update the user's password
-    const supabase = createClient();
+    const supabase = supabaseServerClient();
     const { data, error } = await supabase.auth.updateUser({
       password: newPassword,
     });

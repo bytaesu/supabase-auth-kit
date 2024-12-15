@@ -1,10 +1,10 @@
 "use server";
 
-import { createClient } from "@/shared/lib/supabase/client/server";
 import { ActionReturnWithData } from "@/shared/lib/types";
 import { getErrorMessage } from "@/shared/lib/utils";
 import { forgotPasswordFormSchema } from "../lib/validations";
 import { PRESET_AUTH_ERRORS } from "../lib/auth.config";
+import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 
 /**
  * forgotPasswordAction - Handles the forgot password request functionality
@@ -24,7 +24,7 @@ export async function forgotPasswordAction(
     }
 
     // Step 2: Attempt to send a password reset email using Supabase
-    const supabase = createClient();
+    const supabase = supabaseServerClient();
     const { error } = await supabase.auth.resetPasswordForEmail(email);
 
     if (error) {

@@ -2,7 +2,7 @@
 
 import { ActionReturn } from "@/shared/lib/types";
 import { getErrorMessage } from "@/shared/lib/utils";
-import { createClient } from "@/shared/lib/supabase/client/server";
+import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 
 /**
  * signOutAction - Handles user sign-out functionality.
@@ -12,7 +12,7 @@ import { createClient } from "@/shared/lib/supabase/client/server";
 export async function signOutAction(): Promise<ActionReturn> {
   try {
     // Step 1: Perform the sign-out operation
-    const supabase = createClient();
+    const supabase = supabaseServerClient();
     const { error } = await supabase.auth.signOut();
 
     // Handle sign-out error if one occurs

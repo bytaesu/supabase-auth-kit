@@ -2,8 +2,8 @@
 
 import { ActionReturn } from "@/shared/lib/types";
 import { getErrorMessage } from "@/shared/lib/utils";
-import { createClient } from "@/shared/lib/supabase/client/server";
 import { PRESET_AUTH_ERRORS, PresetEmailOtpType } from "../lib/auth.config";
+import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 
 /**
  * verifyOtpAction - Manages the OTP verification process for email-based actions.
@@ -17,7 +17,7 @@ export async function verifyOtpAction(
 ): Promise<ActionReturn> {
   try {
     // Step 1: Initialize Supabase client and attempt OTP verification
-    const supabase = createClient();
+    const supabase = supabaseServerClient();
 
     const { data, error } = await supabase.auth.verifyOtp({
       email,

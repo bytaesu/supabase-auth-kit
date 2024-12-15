@@ -1,4 +1,4 @@
-import { PRESET_AUTH_ERRORS } from "./auth.config";
+import { PRESET_AUTH_ERRORS } from "@/shared/lib/supabase/auth/auth.config";
 
 // Checks if the provided error message matches a preset error message.
 export function isPresetAuthError(

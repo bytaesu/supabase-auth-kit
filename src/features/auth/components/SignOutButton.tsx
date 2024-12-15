@@ -1,11 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import {
+  AUTH_ROUTES,
+  PRESET_AUTH_ERRORS,
+} from "@/shared/lib/supabase/auth/auth.config";
 import { toast } from "sonner";
-import { useRouter } from "next/navigation";
 import { Button, ButtonProps } from "@/shared/components/ui/button";
-import { AUTH_ROUTES, PRESET_AUTH_ERRORS } from "../lib/auth.config";
 import { signOutAction } from "../actions/sign-out";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
 
 type SignOutButtonProps = Pick<
   ButtonProps,

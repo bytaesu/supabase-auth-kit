@@ -2,8 +2,8 @@
 
 import { ActionReturn } from "@/shared/lib/types";
 import { getErrorMessage } from "@/shared/lib/utils";
-import { PRESET_AUTH_ERRORS, PresetEmailOtpType } from "../lib/auth.config";
 import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
+import { PRESET_AUTH_ERRORS, PresetEmailOtpType } from "@/shared/lib/supabase/auth/auth.config";
 
 /**
  * verifyOtpAction - Manages the OTP verification process for email-based actions.

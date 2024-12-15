@@ -1,10 +1,6 @@
 "use client";
 
 import {
-  PRESET_EMAIL_OTP_CONFIG,
-  PresetEmailOtpType,
-} from "../lib/auth.config";
-import {
   CardContent,
   CardFooter,
   CardHeader,
@@ -14,6 +10,10 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/shared/components/ui/input-otp";
+import {
+  PRESET_EMAIL_OTP_CONFIG,
+  PresetEmailOtpType,
+} from "@/shared/lib/supabase/auth/auth.config";
 import { Button } from "@/shared/components/ui/button";
 import { delay } from "@/shared/lib/utils";
 import { verificationFormSchema } from "../lib/validations";

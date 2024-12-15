@@ -2,9 +2,10 @@ import {
   AUTH_ROUTES,
   ONLY_PRIVATE_ROUTES,
   ONLY_PUBLIC_ROUTES,
-} from "./features/auth/lib/auth.config";
-import { updateSupabaseSession } from "./shared/lib/supabase/session";
+} from "./shared/lib/supabase/auth/auth.config";
+import { updateSupabaseSession } from "./shared/lib/supabase/auth/session";
 import { NextResponse, type NextRequest } from "next/server";
+
 
 export async function middleware(request: NextRequest) {
   const {

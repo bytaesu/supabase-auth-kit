@@ -9,7 +9,7 @@ import ContinueWithOAuth from "@/features/auth/components/ContinueWithOAuth";
 import SignUpForm from "@/features/auth/components/SignUpForm";
 import VerificationStage from "@/features/auth/components/VerificationStage";
 import useVerificationStage from "@/features/auth/hooks/useVerificationStage";
-import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
+import { AUTH_ROUTES } from "@/shared/lib/supabase/auth/auth.config";
 import { OrDivider } from "@/shared/components/ui/or-divider";
 import GoogleLogo from "@/shared/components/ui/svg/google-logo";
 import Link from "next/link";

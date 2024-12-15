@@ -2,8 +2,8 @@
 
 import { ActionReturn } from "@/shared/lib/types";
 import { getErrorMessage } from "@/shared/lib/utils";
-import { PRESET_AUTH_ERRORS } from "../lib/auth.config";
 import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
+import { PRESET_AUTH_ERRORS } from "@/shared/lib/supabase/auth/auth.config";
 
 /**
  * resetPasswordAction - Handles password reset functionality.

@@ -8,7 +8,7 @@ import {
 import ForgotPasswordForm from "@/features/auth/components/ForgotPasswordForm";
 import VerificationStage from "@/features/auth/components/VerificationStage";
 import useVerificationStage from "@/features/auth/hooks/useVerificationStage";
-import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
+import { AUTH_ROUTES } from "@/shared/lib/supabase/auth/auth.config";
 import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";

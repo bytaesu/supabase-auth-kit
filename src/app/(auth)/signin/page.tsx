@@ -9,7 +9,7 @@ import { SearchParams } from "@/shared/lib/types";
 import AuthErrorAlert from "@/features/auth/components/AuthErrorAlert";
 import ContinueWithOAuth from "@/features/auth/components/ContinueWithOAuth";
 import SignInForm from "@/features/auth/components/SignInForm";
-import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
+import { AUTH_ROUTES } from "@/shared/lib/supabase/auth/auth.config";
 import { isPresetAuthError } from "@/features/auth/lib/utils";
 import Link from "next/link";
 import React from "react";

@@ -8,7 +8,7 @@ import {
 import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 import ResetPasswordForm from "@/features/auth/components/ResetPasswordForm";
 import SignOutButton from "@/features/auth/components/SignOutButton";
-import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
+import { AUTH_ROUTES } from "@/shared/lib/supabase/auth/auth.config";
 import { ChevronLeft } from "lucide-react";
 import { redirect } from "next/navigation";
 import React from "react";

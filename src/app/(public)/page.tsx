@@ -4,7 +4,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/shared/components/ui/card";
-import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
+import { AUTH_ROUTES } from "@/shared/lib/supabase/auth/auth.config";
 import { Button } from "@/shared/components/ui/button";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Image from "next/image";

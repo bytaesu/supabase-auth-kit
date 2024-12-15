@@ -10,9 +10,9 @@ import {
 } from "@/shared/components/ui/form";
 import { Input } from "@/shared/components/ui/input";
 import { Button } from "@/shared/components/ui/button";
+import { AUTH_ROUTES } from "@/shared/lib/supabase/auth/auth.config";
 import { resetPasswordFormSchema } from "../lib/validations";
 import { resetPasswordAction } from "../actions/reset-password";
-import { AUTH_ROUTES } from "../lib/auth.config";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -42,7 +42,7 @@ const ResetPasswordForm = () => {
    * - Submits the new password and, upon success, navigates the user to the private home page.
    */
   const onSubmit = async (
-    formData: z.infer<typeof resetPasswordFormSchema>,
+    formData: z.infer<typeof resetPasswordFormSchema>
   ) => {
     setIsLoading(true);
 

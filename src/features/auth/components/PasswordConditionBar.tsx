@@ -1,4 +1,4 @@
-import { PASSWORD_REQUIREMENTS } from "../lib/auth.config";
+import { PASSWORD_REQUIREMENTS } from "@/shared/lib/supabase/auth/auth.config";
 
 type Props = {
   password: string;

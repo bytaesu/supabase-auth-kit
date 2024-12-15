@@ -8,12 +8,12 @@ import {
   FormLabel,
   FormMessage,
 } from "@/shared/components/ui/form";
+import { PRESET_AUTH_ERRORS } from "@/shared/lib/supabase/auth/auth.config";
 import { Input } from "@/shared/components/ui/input";
 import { Button } from "@/shared/components/ui/button";
 import PasswordInput from "./PasswordInput";
 import PasswordConditionBar from "./PasswordConditionBar";
 import { signUpFormSchema } from "../lib/validations";
-import { PRESET_AUTH_ERRORS } from "../lib/auth.config";
 import { signUpAction } from "../actions/sign-up";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";

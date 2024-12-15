@@ -7,7 +7,7 @@ import {
 } from "@/shared/components/ui/card";
 import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 import SignOutButton from "@/features/auth/components/SignOutButton";
-import { AUTH_ROUTES } from "@/features/auth/lib/auth.config";
+import { AUTH_ROUTES } from "@/shared/lib/supabase/auth/auth.config";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import React from "react";

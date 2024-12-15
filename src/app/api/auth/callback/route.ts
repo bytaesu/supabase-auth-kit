@@ -1,7 +1,7 @@
 import {
   AUTH_ROUTES,
   PRESET_AUTH_ERRORS,
-} from "@/features/auth/lib/auth.config";
+} from "@/shared/lib/supabase/auth/auth.config";
 import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
 import { NextResponse } from "next/server";
 

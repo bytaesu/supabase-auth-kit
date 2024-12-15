@@ -8,11 +8,11 @@ import {
   FormLabel,
   FormMessage,
 } from "@/shared/components/ui/form";
+import { AUTH_ROUTES } from "@/shared/lib/supabase/auth/auth.config";
 import { Input } from "@/shared/components/ui/input";
 import { Button } from "@/shared/components/ui/button";
 import PasswordInput from "./PasswordInput";
 import { signInFormSchema } from "../lib/validations";
-import { AUTH_ROUTES } from "../lib/auth.config";
 import { signInAction } from "../actions/sign-in";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";

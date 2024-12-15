@@ -2,9 +2,9 @@
 
 import { ActionReturn } from "@/shared/lib/types";
 import { getErrorMessage } from "@/shared/lib/utils";
-import { signInFormSchema } from "../lib/validations";
-import { PRESET_AUTH_ERRORS } from "../lib/auth.config";
 import { supabaseServerClient } from "@/shared/lib/supabase/client/server";
+import { PRESET_AUTH_ERRORS } from "@/shared/lib/supabase/auth/auth.config";
+import { signInFormSchema } from "../lib/validations";
 
 /**
  * signInAction - Handles user sign-in functionality.

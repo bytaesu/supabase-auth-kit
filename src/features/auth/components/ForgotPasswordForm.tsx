@@ -15,9 +15,9 @@ import { z } from "zod";
 import { toast } from "sonner";
 import { Input } from "@/shared/components/ui/input";
 import { Button } from "@/shared/components/ui/button";
+import { PRESET_AUTH_ERRORS } from "@/shared/lib/supabase/auth/auth.config";
 import { forgotPasswordFormSchema } from "../lib/validations";
 import { forgotPasswordAction } from "../actions/forgot-password";
-import { PRESET_AUTH_ERRORS } from "../lib/auth.config";
 
 interface ForgotPasswordFormProps {
   enterVerificationStage: (userEmail: string) => void;

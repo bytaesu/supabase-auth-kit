@@ -110,7 +110,7 @@ Updated CSS styling to use shadcn defaults for a more primitive kit setup. Renam
 
 5. **Modify the code to match Supabase settings**
 
-   This is centrally managed in **`src/features/auth/lib/auth.config.ts`**
+   This is centrally managed in **`src/shared/lib/supabase/auth/auth.config.ts`**
 
 ## Social Login (OAuth)
 

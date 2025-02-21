@@ -1,6 +1,6 @@
 ![nextjs-supabase-auth-kit](https://github.com/user-attachments/assets/eec5e637-e244-450b-8083-b045e91d8b1f)
 
-# Major update
+# 📌 Major update
 
 **nextjs-supabase-auth-kit has been renamed to `Nextpabase`, and a major update is coming soon.**
 

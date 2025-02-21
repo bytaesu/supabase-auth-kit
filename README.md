@@ -2,7 +2,8 @@
 
 # 📌 Major update
 
-**nextjs-supabase-auth-kit has been renamed to `Nextpabase`, and a major update is coming soon.**
+**nextjs-supabase-auth-kit has been renamed to `Nextpabase`, and a major update is coming soon.**  
+**A major update is planned that will significantly change the current code structure.**
 
 </br>
 </br>
